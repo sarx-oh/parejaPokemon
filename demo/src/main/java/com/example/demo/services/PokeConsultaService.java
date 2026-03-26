@@ -33,10 +33,11 @@ public class PokeConsultaService {
                 }
 
                 String id = document.getId();
-                Integer vida1 = obtenerEntero(data.get("vida1"));
-                Integer vida2 = obtenerEntero(data.get("vida2"));
+                String nombre = obtenerTexto(data.get("nombre"));
+                String imagen = obtenerTexto(data.get("imagen"));
+                Integer vida = obtenerEntero(data.get("vida"));
 
-                pokemons.add(new pokeEntity(id, vida1, vida2));
+                pokemons.add(new pokeEntity(id, nombre, imagen, vida));
             }
 
             return pokemons;
@@ -55,5 +56,13 @@ public class PokeConsultaService {
         }
 
         return Integer.parseInt(String.valueOf(valor));
+    }
+
+    private String obtenerTexto(Object valor) {
+        if (valor == null) {
+            return "";
+        }
+
+        return String.valueOf(valor);
     }
 }

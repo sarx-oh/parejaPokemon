@@ -4,7 +4,7 @@ import PokemonList from "./components/PokemonList";
 function App() {
   return (
     <main className="app">
-      <h1>Tabla de Batallas</h1>
+      <h1>Pokemones</h1>
       <PokemonList />
     </main>
   );

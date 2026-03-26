@@ -27,25 +27,21 @@ function PokemonList() {
       {error && <p>{error}</p>}
 
       {!loading && !error && (
-        <div className="table-wrapper">
-          <table className="pokemon-table">
-            <thead>
-              <tr>
-                <th>Batalla</th>
-                <th>Vida 1</th>
-                <th>Vida 2</th>
-              </tr>
-            </thead>
-            <tbody>
-              {pokemons.map((pokemon) => (
-                <tr key={pokemon.id}>
-                  <td>{pokemon.id}</td>
-                  <td>{pokemon.vida1}</td>
-                  <td>{pokemon.vida2}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <div className="pokemon-grid">
+          {pokemons.map((pokemon) => (
+            <article className="pokemon-card" key={pokemon.id}>
+              <img
+                className="pokemon-image"
+                src={pokemon.imagen}
+                alt={pokemon.nombre}
+              />
+              <div className="pokemon-card-content">
+                <h2>{pokemon.nombre}</h2>
+                <p>ID: {pokemon.id}</p>
+                <p>Vida: {pokemon.vida}</p>
+              </div>
+            </article>
+          ))}
         </div>
       )}
     </div>

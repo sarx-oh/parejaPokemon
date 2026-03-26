@@ -2,16 +2,18 @@ package com.example.demo.model;
 
 public class pokeEntity {
     private String id;
-    private Integer vida1;
-    private Integer vida2;
+    private String nombre;
+    private String imagen;
+    private Integer vida;
 
     public pokeEntity() {
     }
 
-    public pokeEntity(String id, Integer vida1, Integer vida2) {
+    public pokeEntity(String id, String nombre, String imagen, Integer vida) {
         this.id = id;
-        this.vida1 = vida1;
-        this.vida2 = vida2;
+        this.nombre = nombre;
+        this.imagen = imagen;
+        this.vida = vida;
     }
 
     public String getId() {
@@ -22,19 +24,27 @@ public class pokeEntity {
         this.id = id;
     }
 
-    public Integer getVida1() {
-        return vida1;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setVida1(Integer vida1) {
-        this.vida1 = vida1;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public Integer getVida2() {
-        return vida2;
+    public String getImagen() {
+        return imagen;
     }
 
-    public void setVida2(Integer vida2) {
-        this.vida2 = vida2;
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
+    }
+
+    public Integer getVida() {
+        return vida;
+    }
+
+    public void setVida(Integer vida) {
+        this.vida = vida;
     }
 }
