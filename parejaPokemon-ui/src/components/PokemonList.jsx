@@ -12,7 +12,7 @@ function PokemonList() {
         const data = await getPokemons();
         setPokemons(data);
       } catch (err) {
-        setError("No se pudieron cargar los pokemon.");
+        setError("No se pudieron cargar los Looney Tunes.");
       } finally {
         setLoading(false);
       }
@@ -38,7 +38,7 @@ function PokemonList() {
               <div className="pokemon-card-content">
                 <h2>{pokemon.nombre}</h2>
                 <p>ID: {pokemon.id}</p>
-                <p>Vida: {pokemon.vida}</p>
+                <p>Vida ❤️ : {pokemon.vida}</p>
               </div>
             </article>
           ))}
